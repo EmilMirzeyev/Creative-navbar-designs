@@ -1,0 +1,430 @@
+* {
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+/****************************************************/
+/********************FIRST NAVBAR********************/
+/****************************************************/
+
+.container {
+    width: 100%;
+    height: 20%;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.container ul li {
+    text-align: center;
+    transition: all .2s;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 2px;
+}
+
+.container ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: white;
+    z-index: -1;
+    transition: all .6s;
+}
+
+.container ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    transition: all .2s ;
+}
+
+.container ul:hover li a {
+    filter: blur(2px);    
+    font-size: 16px;
+}
+
+.container ul li:hover::before {
+    width: 100%;
+}
+
+.container ul li:hover a {
+    filter: blur(0);
+}
+
+.container ul li:hover {
+    transform: scale(2);
+    position: relative;
+    z-index: 1;
+}
+
+/****************************************************/
+/*******************SECOND NAVBAR********************/
+/****************************************************/
+
+.container_1 {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(142, 218, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_1 ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.container_1 ul li {
+    text-align: center;
+    transition: all .2s;
+    position: relative;
+    padding: 2px;
+}
+
+.container_1 ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    transition: all .8s;
+}
+
+.container_1 ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    transition: all .8s;
+}
+
+.container_1 ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    transition: all .2s;
+}
+
+.container_1 ul li:hover::before {
+    top: -15px;
+    background-color: black;
+}
+
+.container_1 ul li:hover::after {
+    bottom: -15px;
+    background-color: black;
+}
+
+.container_1 ul:hover li a {
+    filter: blur(2px);    
+    font-size: 16px;
+}
+
+.container_1 ul li:hover a {
+    filter: blur(0);
+}
+
+.container_1 ul li:hover {
+    transform: scale(2);
+    position: relative;
+    z-index: 1;
+}
+
+/****************************************************/
+/********************THIRD NAVBAR********************/
+/****************************************************/
+
+.container_2 {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(212, 216, 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_2 ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.container_2 ul li {
+    text-align: center;
+    transition: all .2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.container_2 ul li:hover {
+    border: 2px solid black;
+}
+
+.container_2 ul li:hover div {
+    animation: mkanime .5s linear forwards ;
+}
+
+.container_2 ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    transition: all .2s;
+}
+
+@keyframes mkanime {
+    0% { 
+        transform: scale(1);
+        opacity: 1; 
+    }
+    49% { 
+        transform: scale(3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.container_2 ul:hover li a {
+    filter: blur(2px);    
+    font-size: 16px;
+}
+
+.container_2 ul li:hover a {
+    filter: blur(0);
+}
+
+.container_2 ul li:hover div {
+    transform: scale(3);
+}
+
+.container_2 ul li:hover {
+    transform: scale(2);
+    position: relative;
+    z-index: 1;
+}
+
+/****************************************************/
+/*******************FOURTH NAVBAR********************/
+/****************************************************/
+
+.container_3 {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(141, 7, 101);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_3 ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.container_3 ul li {
+    text-align: center;
+    transition: all .2s;
+    position: relative;
+    padding: 4px;
+}
+
+.container_3 ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    border: 2px solid;
+    border-left: none;
+    border-bottom: none;
+    opacity: 0;
+}
+
+.container_3 ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 2px solid;
+    border-right: none;
+    border-top: none;
+    opacity: 0;
+}
+
+.container_3 ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    transition: all .2s;
+}
+
+.container_3 ul li:hover::before {
+    width: 100%;
+    height: 92%;
+    opacity: 1;
+    transition: width .4s linear,
+                height .2s .4s linear;
+}
+
+.container_3 ul li:hover::after {
+    width: 100%;
+    height: 92%;
+    opacity: 1;
+    transition: width .4s  linear,
+                height .2s .4s linear;
+}
+
+.container_3 ul:hover li a {
+    filter: blur(2px);    
+    font-size: 16px;
+}
+
+.container_3 ul li:hover a {
+    filter: blur(0);
+}
+
+.container_3 ul li:hover {
+    transform: scale(2);
+    position: relative;
+    z-index: 1;
+}
+
+/****************************************************/
+/*******************FOURTH NAVBAR********************/
+/****************************************************/
+
+.container_4 {
+    width: 100%;
+    height: 20%;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_4 ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.container_4 ul li {
+    text-align: center;
+    transition: all .2s;
+    position: relative;
+    padding: 10px;
+}
+
+.container_4 ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:  rgb(0, 74, 212);
+    filter: blur(25px);
+    transition: all .5s;
+    opacity: 0;
+}
+
+.container_4 ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+}
+
+.container_4 ul li a::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(0, 74, 212);
+    z-index: -1;
+    filter: blur(5px);
+    opacity: 0;
+}
+
+.container_4 ul:hover li a {
+    text-shadow: 0 0 10px rgb(0, 74, 212);
+    position: relative;
+    z-index: 1;
+    filter: blur(2px);    
+    font-size: 16px;
+}
+
+.container_4 ul li:hover a {
+    filter: blur(0);
+}
+
+.container_4 ul li:hover a::after {
+    transition: all .5s;
+    opacity: 1;
+}
+
+.container_4 ul li:hover {
+    transform: scale(2);
+    position: relative;
+    z-index: 1;
+}
+
+.container_4 ul li:hover::before {
+    opacity: 1;
+}
